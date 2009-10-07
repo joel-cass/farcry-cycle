@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<webtop>
+	<section mergeType="merge" id="content">
+		<subsection mergeType="merge" id="farcrycmsSubSection">
+			<menu mergeType="merge" id="slideshowSubSection" label="Slideshow" labelType="value">
+				<menuitem 
+					mergeType="merge" 
+					id="jcSlidelist" 
+					label="Slide" 
+					link="/admin/customadmin.cfm?module=customlists/jcSlide.cfm" 
+					relatedType="jcSlide" />
+			</menu>
+		</subsection>
+	</section>
+</webtop>
+

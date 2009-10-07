@@ -1,0 +1,75 @@
+.slideshow-container {
+	margin: 12px auto;
+	position: relative;
+}
+.slideshow-container .slide {
+	top:0;left:0;
+	display:none;
+	overflow:hidden;
+}
+.slideshow-container .slide .slide-overlay {
+	position: absolute;
+	left: 0; top: 0;
+}
+.slideshow-container .slide .slide-background {
+	position: absolute;
+	left: 0; top: 0;
+	height: 60px;
+	background-color: #000000;
+	opacity: 0.5;
+}
+* html .slideshow-container .slide .slide-background { filter:alpha(opacity=50); }
+.slideshow-container .slide .slide-description {
+	position: absolute;
+	left: 0; top: 0;
+	padding: 10px;
+}
+.slideshow-container .slide .slide-description h3 { color: #FFFFFF; margin:0; padding:0; }
+.slideshow-container .slide .slide-description p { color: #FFFFFF; margin:0; padding:0; }
+
+.slideshow-controls {
+	z-index: 50;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	width: auto !important;
+}
+.slideshow-controls a:link, 
+.slideshow-controls a:visited,
+.slideshow-controls a:hover,
+.slideshow-controls a:active {
+	display: block;
+	float: left;
+	border: 1px solid #CCCCCC;
+	background-color: #000000;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+	padding: 4px 6px;
+	margin: 2px;
+	width: 6px;
+	opacity: 0.5;
+}
+* html .slideshow-controls a:link, 
+* html .slideshow-controls a:visited,
+* html .slideshow-controls a:hover,
+* html .slideshow-controls a:active { filter:alpha(opacity=50); }
+
+.slideshow-controls a:hover {
+	opacity: 1;
+}
+* html .slideshow-controls a:hover { filter:alpha(opacity=100); }
+
+.slideshow-controls a.activeSlide:link, 
+.slideshow-controls a.activeSlide:visited,
+.slideshow-controls a.activeSlide:hover,
+.slideshow-controls a.activeSlide:active {
+	font-weight: bold;
+	border: 1px solid #FFFFFF;
+	background-color: #666666;
+	opacity: 1;
+}
+* html .slideshow-controls a.activeSlide:link, 
+* html .slideshow-controls a.activeSlide:visited,
+* html .slideshow-controls a.activeSlide:hover,
+* html .slideshow-controls a.activeSlide:active { filter:alpha(opacity=100); }
