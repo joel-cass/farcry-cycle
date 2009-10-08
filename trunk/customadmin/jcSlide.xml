@@ -7,7 +7,7 @@
 					mergeType="merge" 
 					id="jcSlidelist" 
 					label="Slide" 
-					link="/admin/customadmin.cfm?module=customlists/jcSlide.cfm" 
+					link="/admin/customadmin.cfm?module=customlists/jcSlide.cfm&amp;plugin=slideshow" 
 					relatedType="jcSlide" />
 			</menu>
 		</subsection>
