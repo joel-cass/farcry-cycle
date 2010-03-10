@@ -4,7 +4,9 @@
 
 <cfparam name="REQUEST.slideshowIndex" default="0" />
 <cfset REQUEST.slideshowIndex = REQUEST.slideshowIndex + 1 />
-<cfset stObj.bControls = true>
+
+<cfparam name="stObj.bShowNavigation" type="boolean" default="false">
+<cfparam name="stObj.bShowDescription" type="boolean" default="false">
 
 <cfsavecontent variable="strHeader">
 	<cfoutput>
@@ -29,6 +31,13 @@
 			width:#stObj.width#px;
 			height:#stObj.height#px;
 		}
+		<cfif NOT stObj.bShowNavigation>
+			##slideshow-#REQUEST.slideshowIndex# .slideshow-controls { display:none; }
+		</cfif>
+		<cfif NOT stObj.bShowDescription>
+			##slideshow-#REQUEST.slideshowIndex# .slide-description { display:none; }
+			##slideshow-#REQUEST.slideshowIndex# .slide-background { display:none; }
+		</cfif>
 	</style>
 	<script type="text/javascript">
 		jQuery.noConflict();
@@ -50,17 +59,15 @@
 
 <cfoutput><div id="slideshow-#REQUEST.slideshowIndex#" class="slideshow-container"></cfoutput>
 
-<cfoutput><div class="slides"></cfoutput>
+	<cfoutput><div class="slides"></cfoutput>
 
-<cfloop from="1" to="#arraylen(stObj.aSlides)#" index="i">
-	<skin:view objectid="#stObj.aSlides[i]#" typename="jcSlide" webskin="displaySlide" />
-</cfloop>
+	<cfloop from="1" to="#arraylen(stObj.aSlides)#" index="i">
+		<skin:view objectid="#stObj.aSlides[i]#" typename="jcSlide" webskin="displaySlide" />
+	</cfloop>
 
-<cfoutput></div></cfoutput>
+	<cfoutput></div></cfoutput>
 
-<cfif stObj.bControls>
 	<cfoutput><div id="slideshow-#REQUEST.slideshowIndex#-controls" class="slideshow-controls"></div></cfoutput>
-</cfif>
 
 <cfoutput></div></cfoutput>
 

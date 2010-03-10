@@ -15,4 +15,10 @@
 	<cfproperty ftSeq="10" ftFieldSet="Slides" name="aSlides" type="array" 
 				ftJoin="jcSlide" ftLabel="Select Slides" />
 	
+	<!--- settings --->
+	<cfproperty ftseq="15" ftFieldSet="Controls" type="numeric" name="bShowNavigation" 
+				ftLabel="Show Navigation?" ftType="list" ftList="1:Yes,0:No" default="1">
+	<cfproperty ftseq="16" ftFieldSet="Controls" type="numeric" name="bShowDescription" 
+				ftLabel="Show Description?" ftType="list" ftList="1:Yes,0:No" default="1">
+
 </cfcomponent>
