@@ -17,7 +17,7 @@
 </cfif>
 
 <cfoutput>
-<div class="slide" style="background:##000000 url(#stObj.Image#) 50% 50% no-repeat;">
+<div class="slide" style="background:##000000 url(#replace(stObj.Image,' ','%20','all')#) 50% 50% no-repeat;">
 	<div class="slide-background">&nbsp;</div>
 	<div class="slide-description">
 		<h3>#stObj.title#</h3>
