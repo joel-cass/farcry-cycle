@@ -23,9 +23,9 @@
 		<h3>#stObj.title#</h3>
 		<p>#stObj.description#</p>
 	</div>
-	<a href="#strURL#" target="#strTarget#">
+	<cfif len(strURL)><a href="#strURL#" target="#strTarget#"></cfif>
 		<img src="/farcry/plugins/slideshow/assets/images/spacer.gif" alt="#stObj.title#" class="slide-overlay" />
-	</a>
+	<cfif len(strURL)></a></cfif>
 </div>
 </cfoutput>
 
